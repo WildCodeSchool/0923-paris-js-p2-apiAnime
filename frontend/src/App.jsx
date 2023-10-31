@@ -1,41 +1,41 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
-import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [datas, setDatas] = useState([]);
+  const [filteredDatas, setFilteredDatas] = useState([]);
+  useEffect(() => {
+    fetch("https://api.jikan.moe/v4/anime?q=genre&sfw")
+      .then((res) => res.json())
+      .then((data) => {
+        setDatas(data.data);
+        setFilteredDatas(data.data);
+      });
+  }, []);
+  const filterData = (filterValue) => {
+    const filtered = datas.filter((anime) =>
+      anime.toLowerCase().includes(filterValue.toLowerCase())
+    );
+    console.info(filtered);
+    setFilteredDatas(filtered);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
+    <>
+      <h1>IRIYAJO</h1>
+      <input
+        type="text"
+        placeholder="Rechercher un anime"
+        onChange={(e) => filterData(e.target.value)}
+      />
 
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+      {filteredDatas.map((integer) => (
+        <div key={integer}>
+          {integer.genres.map((genre) => {
+            return <p>{genre.name}</p>;
+          })}
+          <img src={integer.images.webp.small_image_url} alt={integer.title} />
+        </div>
+      ))}
+    </>
   );
 }
 
