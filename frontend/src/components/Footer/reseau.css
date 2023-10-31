@@ -1,0 +1,25 @@
+.logoreseau {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.img {
+  width: 4rem;
+  height: 80%;
+}
+
+.img:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 426px) {
+  .logoreseau {
+    gap: 0.5rem;
+  }
+
+  .img {
+    width: 3rem;
+    height: 80%;
+  }
+}
