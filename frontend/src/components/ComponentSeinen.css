@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  background-color: rgb(6, 6, 61);
+}
+
+.Categories {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CapsuleCorp {
+  height: 5rem;
+}
+
+h1 {
+  background-color: antiquewhite;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 8%;
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  justify-content: space-between;
+  margin-left: 12rem;
+  margin-top: 2rem;
+  gap: 50px;
+  padding-bottom: 10%;
+}
+
+.anime {
+  height: 20rem;
+  width: 14rem;
+  border-radius: 5%;
+}
