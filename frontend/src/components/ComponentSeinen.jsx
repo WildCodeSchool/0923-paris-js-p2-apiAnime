@@ -6,17 +6,15 @@ function ComponentSeinen() {
       <div className="Categories">
         <img
           className="CapsuleCorp"
-          src="../src/assets/images/CapsuleCorp.png"
+          src="../src/assets/images/TestGoku/CapsuleCorp.png"
           alt="CapsuleCorp logo"
         />
-        <div>
-          <h1>Autre catégories</h1>
-        </div>
+        <h1>Autre catégories</h1>
       </div>
       <div className="resume">
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/97983350.png"
+          src="../src/assets/images/TestGoku/Sangoku.jpg"
           alt="sangoku"
         />
 
