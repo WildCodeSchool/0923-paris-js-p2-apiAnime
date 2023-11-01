@@ -1,0 +1,23 @@
+.NavBar {
+  background-color: #865e4e;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.IriyajoLogo {
+  height: 10rem;
+}
+
+.AkatsukiLogo {
+  height: 7rem;
+  width: 15rem;
+  margin-bottom: 1.3rem;
+  margin-left: 3rem;
+}
+
+.NuageMagikLogo {
+  height: 9rem;
+  width: 17rem;
+  margin-top: 1rem;
+}

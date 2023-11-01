@@ -1,0 +1,17 @@
+.LoginSignup {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 6.5rem;
+}
+.Login {
+  position: relative;
+  right: 18.6rem;
+  bottom: 0.3rem;
+  height: 4.5rem;
+}
+.SignUp {
+  position: relative;
+  height: 4rem;
+  right: 8.2rem;
+}
