@@ -1,14 +1,25 @@
-#root {
+body {
   background-image: url("../src/assets/images/sunset.png");
   background-size: contain;
 }
+img {
+  height: 5rem;
+}
+.IconGame {
+  display: flex;
+}
+p {
+  font-size: 1rem;
+}
 .Categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 3rem;
 }
 h1 {
-  background-color: brown;
+  background-color: white;
+  font-size: 2rem;
+  border-radius: 6%;
 }
 .CapsuleCorp {
   height: 6rem;
