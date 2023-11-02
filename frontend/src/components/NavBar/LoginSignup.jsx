@@ -9,7 +9,6 @@ function LoginSignup() {
           src="../src/assets/images/NavBar/sign up.png"
           alt="Signup"
         />
-
         <img
           className="Login"
           src="../src/assets/images/NavBar/login.png"

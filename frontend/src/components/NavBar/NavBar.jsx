@@ -1,8 +1,6 @@
 import "./NavBar.css";
 
 function NavBar() {
-  // const [login, setLogin] = useState();
-
   return (
     <div className="NavBar">
       <img
