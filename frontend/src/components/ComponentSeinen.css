@@ -1,12 +1,9 @@
 body {
   background-image: url("../src/assets/images/sunset.png");
-  background-size: contain;
+  background-size: cover;
 }
 img {
   height: 5rem;
-}
-.IconGame {
-  display: flex;
 }
 p {
   font-size: 1rem;
@@ -15,20 +12,20 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+  margin-right: 2rem;
 }
 h1 {
   background-color: white;
   font-size: 2rem;
-  border-radius: 6%;
-}
-.CapsuleCorp {
-  height: 6rem;
+  border-radius: 50%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .resume {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   justify-content: space-between;
-  margin-left: 12rem;
+  margin-left: 17rem;
   margin-top: 2rem;
   gap: 50px;
   padding-bottom: 10%;

@@ -41,34 +41,34 @@ function ComponentSeinen() {
       <div className="resume">
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/Sangoku.jpg"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/Ajin.jpg"
+          alt="Ajin"
         />
 
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/sayen.jpg"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/Akira.jpg"
+          alt="Akira"
         />
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/sayen3.png"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/Berserk.jpg"
+          alt="Berserk"
         />
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/instinc.jpg"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/OnePunchMan.jpg"
+          alt="OnePunchMan"
         />
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/instinc2.jpg"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/ShigekiNoKyojin.jpg"
+          alt="ShigekiNoKyojin"
         />
         <img
           className="anime"
-          src="../src/assets/images/TestGoku/instinc3.jpg"
-          alt="sangoku"
+          src="../src/assets/images/Seinen/TokyoGhoul.jpg"
+          alt="TokyoGhoul"
         />
       </div>
     </>
