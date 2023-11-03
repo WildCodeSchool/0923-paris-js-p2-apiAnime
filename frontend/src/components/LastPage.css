@@ -1,0 +1,11 @@
+body {
+  background-image: url("../src/components/images/BackgroundNight.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.ImgShenron {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
