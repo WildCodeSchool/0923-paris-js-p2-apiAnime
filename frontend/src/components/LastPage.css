@@ -3,9 +3,15 @@ body {
   background-size: cover;
   margin: 0;
 }
-
 .ImgShenron {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+.VideoResume {
+  text-align: center;
+}
+h1 {
+  margin-top: 0;
+  color: white;
 }
