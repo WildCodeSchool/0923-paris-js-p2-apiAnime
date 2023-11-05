@@ -1,12 +1,12 @@
 import Navbarfiltre from "../components/navbarfiltre/Navbarfiltre";
 
-function Seinen() {
+function Kimodo() {
   return (
     <div>
-      <h2>la page Seinen</h2>
+      <p>la page Kimodo</p>
       <Navbarfiltre />
     </div>
   );
 }
 
-export default Seinen;
+export default Kimodo;

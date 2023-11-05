@@ -1,12 +1,10 @@
 import Catebody from "../components/Categoriesbody/Catebody";
-import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (
-    <section className="section">
+    <div className="section">
       <Catebody />
-      <Footer />
-    </section>
+    </div>
   );
 }
 
