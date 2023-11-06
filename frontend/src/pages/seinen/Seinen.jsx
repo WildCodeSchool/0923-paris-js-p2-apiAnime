@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import Navbarfiltre from "../components/navbarfiltre/Navbarfiltre";
+import Navbarfiltre from "../../components/navbarfiltre/Navbarfiltre";
+import "./seinen.css";
 
-function Shojo() {
+function Seinen() {
   const [mangas, setMangas] = useState([]);
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/manga?page=3`)
+    fetch(`https://api.jikan.moe/v4/anime`)
       .then((res) => res.json())
       .then((data) => setMangas(data.data));
   }, []);
@@ -12,7 +13,7 @@ function Shojo() {
   return (
     <div>
       <Navbarfiltre />
-      <h2 className="h2">la page Shoujo</h2>
+      <h2 className="h2">la page Seinen</h2>
       <div>
         {mangas.map((manga) => {
           return (
@@ -20,7 +21,7 @@ function Shojo() {
               {manga.demographics.map((item) => {
                 return (
                   <div key={item.name}>
-                    {item.name === "Shoujo" && (
+                    {item.name === "Seinen" && (
                       <div>
                         <p> titre: {manga.title}</p>
                         <img src={manga.images.jpg.image_url} alt="" />
@@ -38,4 +39,4 @@ function Shojo() {
   );
 }
 
-export default Shojo;
+export default Seinen;

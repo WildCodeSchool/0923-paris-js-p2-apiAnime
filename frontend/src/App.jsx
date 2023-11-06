@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import Seinen from "./pages/Seinen";
+import Seinen from "./pages/seinen/Seinen";
 import Shonen from "./pages/Shonen";
 import Shojo from "./pages/Shojo";
 import Kimodo from "./pages/Kimodo";
