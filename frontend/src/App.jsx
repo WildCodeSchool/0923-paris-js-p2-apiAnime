@@ -1,15 +1,25 @@
-import NavBar from "./components/NavBar";
-import LoginSignUp from "./components/LoginSignUp";
-import LastPage from "./components/LastPage";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Seinen from "./pages/Seinen";
+import Shonen from "./pages/Shonen";
+import Shojo from "./pages/Shojo";
+import Kimodo from "./pages/Kimodo";
+import LastPage from "./pages/LastPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <LoginSignUp />
-      <LastPage />
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/seinen" element={<Seinen />} />
+        <Route path="/shonen" element={<Shonen />} />
+        <Route path="/shojo" element={<Shojo />} />
+        <Route path="/kimodo" element={<Kimodo />} />
+        <Route path="/lastpage" element={<LastPage />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
-
 export default App;
