@@ -1,11 +1,14 @@
-import Catebody from "../components/Categoriesbody/Catebody";
-import Footer from "../components/Footer/Footer";
+import LoginSignup from "../components/NavBarPage/LoginSignupPages";
+import NavBarPages from "../components/NavBarPage/NavBarPages";
+import "./Home.css";
 
 function Home() {
   return (
-    <section className="section">
-      <Catebody />
-      <Footer />
+    <section>
+      <header id="HomePage">
+        <NavBarPages />
+        <LoginSignup />
+      </header>
     </section>
   );
 }
