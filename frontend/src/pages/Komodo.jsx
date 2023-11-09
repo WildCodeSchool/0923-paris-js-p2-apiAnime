@@ -6,11 +6,26 @@ import "./categorie.css";
 
 function Kimodo() {
   const [mangas, setMangas] = useState([]);
+  const [current, setCurrent] = useState(1);
+  const next = () => setCurrent(current + 1);
+  const previous = () => setCurrent(current - 1);
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime?genres=15&page=17`)
+    fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
-      .then((data) => setMangas(data.data));
+      .then((data) => {
+        setCurrent(data.pagination.current_page);
+        setMangas(data.data);
+      });
   }, []);
+
+  useEffect(() => {
+    if (current !== 1) {
+      fetch(`https://api.jikan.moe/v4/anime?genres=42&page=${current}`)
+        .then((res) => res.json())
+        .then((data) => setMangas(data.data));
+    }
+  }, [current]);
+
   // useEffect(() => {
   //   fetch(`https://api.jikan.moe/v4/anime`)
   //     .then((res) => res.json())
@@ -50,6 +65,12 @@ function Kimodo() {
               </div>
             );
           })}
+          <button type="button" onClick={previous}>
+            Previous
+          </button>
+          <button type="button" onClick={next}>
+            Next
+          </button>
         </div>
       </div>
     </body>

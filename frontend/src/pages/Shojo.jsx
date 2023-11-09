@@ -6,11 +6,26 @@ import "./categorie.css";
 
 function Shojo() {
   const [mangas, setMangas] = useState([]);
+  const [current, setCurrent] = useState(1);
+  const next = () => setCurrent(current + 1);
+  const previous = () => setCurrent(current - 1);
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime?genres=25&page=18`)
+    fetch(`https://api.jikan.moe/v4/anime?genres=18`)
       .then((res) => res.json())
-      .then((data) => setMangas(data.data));
+      .then((data) => {
+        setCurrent(data.pagination.current_page);
+        setMangas(data.data);
+      });
   }, []);
+
+  useEffect(() => {
+    if (current !== 1) {
+      fetch(`https://api.jikan.moe/v4/anime?genres=18&page=${current}`)
+        .then((res) => res.json())
+        .then((data) => setMangas(data.data));
+    }
+  }, [current]);
+
   // useEffect(() => {
   //   fetch(`https://api.jikan.moe/v4/anime?page=20`)
   //     .then((res) => res.json())
@@ -50,6 +65,12 @@ function Shojo() {
               </div>
             );
           })}
+          <button type="button" onClick={previous}>
+            Previous
+          </button>
+          <button type="button" onClick={next}>
+            Next
+          </button>
         </div>
       </div>
     </body>
