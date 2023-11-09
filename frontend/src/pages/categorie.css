@@ -2,7 +2,7 @@
   font-family: Bangers;
   src: url(Bangers-Regular.ttf);
 }
-#PageSelection {
+.PageSelection {
   background-image: url("../src/components/imageBackground/BackgroundSunset.jpg");
   background-size: cover;
   background-attachment: fixed;

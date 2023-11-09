@@ -7,22 +7,34 @@ import "./categorie.css";
 function Kimodo() {
   const [mangas, setMangas] = useState([]);
   const [current, setCurrent] = useState(1);
+  const [viewButton, setViewButton] = useState(true);
   const next = () => setCurrent(current + 1);
   const previous = () => setCurrent(current - 1);
   useEffect(() => {
     fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
       .then((data) => {
-        setCurrent(data.pagination.current_page);
         setMangas(data.data);
       });
   }, []);
 
   useEffect(() => {
     if (current !== 1) {
-      fetch(`https://api.jikan.moe/v4/anime?genres=42&page=${current}`)
+      fetch(`https://api.jikan.moe/v4/anime?genres=17&page=${current}`)
         .then((res) => res.json())
         .then((data) => setMangas(data.data));
+
+      fetch(`https://api.jikan.moe/v4/anime?genres=17&page=${current + 1}`)
+        .then((res) => res.json())
+        .then((data) => {
+          console.info("data", data);
+          // setMangas(data.data);
+          if (data.data.length === 0) {
+            setViewButton(false);
+          } else {
+            setViewButton(true);
+          }
+        });
     }
   }, [current]);
 
@@ -44,7 +56,7 @@ function Kimodo() {
   //     });
   // }, []);
   return (
-    <body id="PageSelection">
+    <main className="PageSelection">
       <NavLinkPage />
       <NavBarPages />
       <LoginSignup />
@@ -65,15 +77,19 @@ function Kimodo() {
               </div>
             );
           })}
-          <button type="button" onClick={previous}>
-            Previous
-          </button>
-          <button type="button" onClick={next}>
-            Next
-          </button>
+          {current <= 1 ? null : (
+            <button type="button" onClick={previous}>
+              Previous
+            </button>
+          )}
+          {viewButton ? (
+            <button type="button" onClick={next}>
+              Next
+            </button>
+          ) : null}
         </div>
       </div>
-    </body>
+    </main>
   );
 }
 
