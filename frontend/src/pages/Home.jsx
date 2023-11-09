@@ -1,12 +1,12 @@
 import LoginSignup from "../components/NavBarPage/LoginSignupPages";
-import NavBarPages from "../components/NavBarPage/NavBarPages";
-import "./Home.css";
+import NavBarPageHome from "../components/NavBarPage/NavBarPageHome";
+import "./home.css";
 
-function NavBar() {
+function Home() {
   return (
     <section>
       <body id="HomePage">
-        <NavBarPages />
+        <NavBarPageHome />
         <LoginSignup />
         <img
           className="LogoIriyajo"
@@ -18,4 +18,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Home;

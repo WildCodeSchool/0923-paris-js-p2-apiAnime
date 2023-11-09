@@ -1,12 +1,10 @@
-import "./navBarPages.css";
-
-function NavBarPages() {
+function NavBarPageHome() {
   return (
     <main>
       <div className="NavBarHome">
         <a href="/">
           <img
-            className="IriyajoLogo"
+            className="IriyajoLogo2"
             src="../src/assets/images/NavBar/Iriyajo2.png"
             alt="logo Iriyajo"
           />
@@ -27,5 +25,4 @@ function NavBarPages() {
     </main>
   );
 }
-
-export default NavBarPages;
+export default NavBarPageHome;

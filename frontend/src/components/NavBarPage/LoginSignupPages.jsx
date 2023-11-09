@@ -1,4 +1,4 @@
-import "./LoginSignUpPages.css";
+import "./loginSignUpPages.css";
 
 function LoginSignup() {
   return (

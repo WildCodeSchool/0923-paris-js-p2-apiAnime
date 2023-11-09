@@ -16,14 +16,6 @@
   color: white;
   font-size: 1.5rem;
 }
-
-.NavLink {
-  font-size: 1.5rem;
-  padding-top: 0.1rem;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #042e44;
-}
 #textNavBar {
   color: white;
   font-size: 1.5rem;

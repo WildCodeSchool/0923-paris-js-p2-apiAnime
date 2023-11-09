@@ -1,14 +1,14 @@
-#HomePage {
-  background-image: url("../src/components/imageBackground/BackgroundMorning.png");
-  background-size: cover;
-  margin: 0;
-}
 .NavBarHome {
   height: 10rem;
   display: flex;
   justify-content: space-between;
 }
 .IriyajoLogo {
+  height: 10rem;
+  position: relative;
+  bottom: 4rem;
+}
+.IriyajoLogo2 {
   height: 10rem;
 }
 .AkatsukiLogo {
@@ -20,4 +20,19 @@
   height: 9rem;
   width: 17rem;
   margin-top: 1rem;
+}
+.NavLink {
+  font-size: 1.5rem;
+  padding-top: 0.1rem;
+  display: flex;
+  justify-content: end;
+  gap: 9rem;
+  padding: 10px 21px;
+  border-radius: 10px;
+}
+#textNavBar {
+  background-color: black;
+  padding: 10px 21px;
+  border-radius: 10px;
+  opacity: 70%;
 }

@@ -2,7 +2,7 @@
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
-import "./LastPage.css";
+import "./lastPage.css";
 
 function LastPage() {
   return (
@@ -12,7 +12,6 @@ function LastPage() {
       <LoginSignup />
       <div className="VideoResume">
         <h1>Résumé Vidéo</h1>
-
         <iframe
           width="650"
           height="400"

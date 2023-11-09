@@ -4,19 +4,19 @@ function NavLinkPage() {
   return (
     <nav className="NavLink">
       <NavLink to="/kimodo">
-        <h1 id="textNavBar">Kimodo</h1>
+        <h1 id="textNavBar">Kômodo</h1>
       </NavLink>
       <NavLink to="/shonen">
-        <h1 id="textNavBar">Shonen</h1>
+        <h1 id="textNavBar">Shôunen</h1>
       </NavLink>
       <NavLink to="/shojo">
-        <h1 id="textNavBar">Shojo</h1>
+        <h1 id="textNavBar">Shôujo</h1>
       </NavLink>
       <NavLink to="/seinen">
         <h1 id="textNavBar">Seinen</h1>
       </NavLink>
       <NavLink to="/lastpage">
-        <h1 id="textNavBar">Resumé</h1>
+        <h1 id="textNavBar">Description</h1>
       </NavLink>
     </nav>
   );

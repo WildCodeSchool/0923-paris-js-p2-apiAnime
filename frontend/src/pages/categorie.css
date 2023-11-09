@@ -1,0 +1,36 @@
+@font-face {
+  font-family: BlackOpsOne;
+  src: url(BlackOpsOne-Regular.ttf);
+}
+#PageSelection {
+  background-image: url("../src/components/imageBackground/BackgroundSunset.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+.resume {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+  justify-content: space-between;
+  margin-left: 2rem;
+  gap: 50px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+img {
+  border-radius: 10%;
+}
+.imageAnime:hover {
+  opacity: 0.8;
+}
+.titreAnime {
+  font-size: 1.5rem;
+  color: white;
+  text-align: left;
+}
+.CategorieAnime {
+  font-family: BlackOpsOne;
+  color: white;
+  font-size: 3.5rem;
+  margin-left: 42rem;
+}
