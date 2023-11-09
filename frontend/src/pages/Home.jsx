@@ -1,5 +1,6 @@
 import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
+import Carousel from "../components/Carousel/Carousel";
 import "./Home.css";
 
 function NavBar() {
@@ -8,11 +9,7 @@ function NavBar() {
       <body id="HomePage">
         <NavBarPages />
         <LoginSignup />
-        <img
-          className="LogoIriyajo"
-          src="../src/assets/images/Iriyajo.jpg"
-          alt="logo Iriyajo"
-        />
+        <Carousel />
       </body>
     </section>
   );

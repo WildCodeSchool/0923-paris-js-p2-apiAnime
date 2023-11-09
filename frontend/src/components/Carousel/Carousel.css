@@ -1,17 +1,20 @@
 .carousel {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /*jouer ici pour la taille */
-  background: rgba(49, 49, 49, 0.1);
+  right: 35px;
+  min-height: 100vh; /*jouer ici pour la taille  la vraie valeur min-heigh 100vh*/
 }
 
 .box {
   position: relative;
-  width: 200px;
-  height: 200px;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
   transform-style: preserve-3d;
-  /*transform: perspective( 1000px );  voir ? */
   animation: carousel 20s linear infinite;
 }
 
