@@ -1,0 +1,8 @@
+.player-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.player {
+  height: fit-content;
+  width: max-content;
+}

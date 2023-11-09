@@ -1,4 +1,4 @@
-#PageResume {
+.PageResume {
   background-image: url("../src/components/imageBackground/BackgroundNight.jpg");
   background-size: cover;
   margin: 0;
@@ -15,6 +15,20 @@
   text-align: center;
   color: white;
   font-size: 1.5rem;
+  justify-content: center;
+  gap: 10;
+}
+.TextResume {
+  color: rgb(93, 179, 179);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 5rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+.VideoResume h2 {
+  color: greenyellow;
 }
 
 .NavLink {

@@ -20,7 +20,7 @@ function App() {
         <Route path="/shonen" element={<Shonen />} />
         <Route path="/shojo" element={<Shojo />} />
         <Route path="/kimodo" element={<Kimodo />} />
-        <Route path="/lastpage" element={<LastPage />} />
+        <Route path="/LastPage/:Id" element={<LastPage />} />
       </Routes>
       <Footer />
     </div>
