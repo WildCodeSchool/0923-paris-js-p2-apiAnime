@@ -173,7 +173,6 @@ table {
   text-align: center;
   border: none;
   cursor: pointer;
-  height: 50%;
   margin: auto 0;
 }
 
@@ -184,8 +183,7 @@ table {
   font-style: italic;
   padding: 1rem;
   font-weight: 700;
-  display: block;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .button:hover {
@@ -281,6 +279,7 @@ a:hover {
 
   .bloc {
     display: block;
+    width: 100%;
   }
 
   .blocboutton {
@@ -295,7 +294,7 @@ a:hover {
   }
 
   .reseau {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 1rem;
   }

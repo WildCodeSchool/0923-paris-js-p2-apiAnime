@@ -1,6 +1,5 @@
 /* eslint-disable react/self-closing-comp */
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./LastPage.css";
 
@@ -9,7 +8,6 @@ function LastPage() {
     <body id="PageResume">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div className="VideoResume">
         <h1>Résumé Vidéo</h1>
 

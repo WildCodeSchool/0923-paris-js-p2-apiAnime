@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./Seinen.css";
 
 function Seinen() {
   const [mangas, setMangas] = useState([]);
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime`)
+    fetch(`https://api.jikan.moe/v4/anime?genres=27`)
       .then((res) => res.json())
       .then((data) => setMangas(data.data));
   }, []);
@@ -15,14 +14,14 @@ function Seinen() {
     <body id="PageSelection">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         <h2 className="h2">la page Seinen</h2>
-        <div>
+        <div className="resume">
           {mangas.map((manga) => {
             return (
               <div key={manga.mal_id}>
-                {manga.demographics.map((item) => {
+                <img src={manga.images.jpg.image_url} alt="" />
+                {/* {manga.demographics.map((item) => {
                   return (
                     <div key={item.name}>
                       {item.name === "Seinen" && (
@@ -36,7 +35,7 @@ function Seinen() {
                       )}
                     </div>
                   );
-                })}
+                })} */}
               </div>
             );
           })}

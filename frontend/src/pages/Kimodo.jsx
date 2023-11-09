@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./Seinen.css";
 
@@ -15,7 +14,6 @@ function Kimodo() {
     <body id="PageSelection">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         <h2 className="h2">la page Shoujo</h2>
         <div>
