@@ -1,16 +1,7 @@
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
-import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./Home.css";
 
 function Home() {
-  return (
-    <section>
-      <header id="HomePage">
-        <NavBarPages />
-        <LoginSignup />
-      </header>
-    </section>
-  );
+  return <p>toto</p>;
 }
 
 export default Home;

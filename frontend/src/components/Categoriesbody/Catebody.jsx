@@ -1,12 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./catebody.css";
-import imgseinen from "../../assets/imgseinen.jpg";
-import imgshonen from "../../assets/imgshonen.jpg";
-import imgshojo from "../../assets/imgshojo.jpg";
-import imgkimodo from "../../assets/imgkimodo.jpg";
+import imgseinen from "../../assets/imgseinen.png";
+import imgshonen from "../../assets/imgshonen 1.png";
+import imgshojo from "../../assets/imgshojo.png";
+import imgkimodo from "../../assets/imgkimodo.png";
 
 function Catebody() {
+  const navigate = useNavigate();
   return (
-    <section className="categories">
+    <section className="catbody">
       <div className="contaih2">
         <h2 className="h2cat">CATEGORIES</h2>
       </div>
@@ -16,21 +18,29 @@ function Catebody() {
             className="imgcat"
             src={imgseinen}
             alt="seinen"
-            // style={{ height: "260px", maxwidth: "184px" }}
+            // style={{ height: "260px" }}
           />
-          <button className="buttoncateg" type="button">
+          <button
+            className="buttoncateg"
+            type="button"
+            onClick={() => navigate("/seinen")}
+          >
             Seinen
           </button>
         </div>
         <div className="groupe shonen">
           <img
-            className="imgcat"
+            className="imgcatshonen"
             src={imgshonen}
             alt="shonen"
-            // style={{ height: "290px", maxwidth: "230px" }}
+            // style={{ height: "220px" }}
           />
-          <button className="buttoncateg" type="button">
-            Shonen
+          <button
+            className="buttoncateg"
+            type="button"
+            onClick={() => navigate("/shonen")}
+          >
+            Shounen
           </button>
         </div>
         <div className="groupe shojo">
@@ -38,10 +48,14 @@ function Catebody() {
             className="imgcat"
             src={imgshojo}
             alt="shojo"
-            // style={{ height: "263px", maxwidth: "202px" }}
+            // style={{ height: "263px" }}
           />
-          <button className="buttoncateg" type="button">
-            Shojo
+          <button
+            className="buttoncateg"
+            type="button"
+            onClick={() => navigate("/shojo")}
+          >
+            Shoujo
           </button>
         </div>
         <div className="groupe kimodo">
@@ -51,8 +65,12 @@ function Catebody() {
             alt="kimodo"
             // style={{ height: "254px", maxwidth: "259px" }}
           />
-          <button className="buttoncateg" type="button">
-            Kimodo
+          <button
+            className="buttoncateg"
+            type="button"
+            onClick={() => navigate("/kimodo")}
+          >
+            Komodo
           </button>
         </div>
       </div>

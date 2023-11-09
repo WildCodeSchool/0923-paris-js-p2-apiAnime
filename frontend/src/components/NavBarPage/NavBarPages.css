@@ -1,23 +1,30 @@
-#HomePage {
-  background-image: url("../src/components/imageBackground/BackgroundMorning.png");
-  background-size: cover;
-  margin: 0;
-}
-.NavBarHome {
-  height: 10rem;
+.navbar1 {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
-.IriyajoLogo {
-  height: 10rem;
+.Iriyajo {
+  width: 90%;
 }
-.AkatsukiLogo {
-  height: 8rem;
-  width: 17rem;
-  margin-bottom: 1rem;
+.loginsign {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  overflow: hidden;
 }
-.NuageMagikLogo {
-  height: 9rem;
-  width: 17rem;
-  margin-top: 1rem;
+.imagenav {
+  overflow: hidden;
+  width: 100%;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 426px) {
+  .Iriyajo {
+    width: 50%;
+  }
+  .loginsign {
+    width: 50%;
+    overflow: hidden;
+  }
 }
