@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import React from "react";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 import Home from "./pages/Home";
 import Seinen from "./pages/Seinen";
 import Shonen from "./pages/Shonen";
