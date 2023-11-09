@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./Seinen.css";
 
@@ -20,7 +19,6 @@ function Shonen() {
     <main className="PageSelection">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         {mangas.map((manga) => {
           return (

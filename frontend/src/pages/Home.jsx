@@ -1,9 +1,9 @@
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import Video from "../components/Video/Video";
+import Carousel from "../components/Carousel/Carousel";
 import "./Home.css";
 
-function NavBar() {
+function Home() {
   return (
     <section>
       <main className="HomePage">
@@ -16,8 +16,9 @@ function NavBar() {
           alt="logo Iriyajo"
         />
       </main>
+        <Carousel />
     </section>
   );
 }
 
-export default NavBar;
+export default Home;

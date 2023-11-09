@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./Seinen.css";
 
@@ -32,7 +31,6 @@ function Seinen() {
     <main className="PageSelection">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         <h2 className="h2">la page Seinen</h2>
         {mangas.map((manga) => {

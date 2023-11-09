@@ -1,37 +1,27 @@
+import { NavLink } from "react-router-dom";
+import login from "../../assets/login.png";
+import signup from "../../assets/signup.png";
 import "./NavBarPages.css";
 
 function NavBarPages() {
   return (
-    <main>
-      <div className="NavBarHome">
-        <a href="/">
-          <img
-            className="IriyajoLogo"
-            src="../src/assets/images/NavBar/Iriyajo2.png"
-            alt="logo Iriyajo"
-          />
-        </a>
-        <div className="Logo">
-          <img
-            className="NuageMagikLogo"
-            src="../src/assets/images/NavBar/NuageMagik.png"
-            alt="logo NuageMagik"
-          />
-          <img
-            className="AkatsukiLogo"
-            src="../src/assets/images/NavBar/Akatsuki-Logo 1@2x.png"
-            alt="logo Akatsuki"
-          />
-        </div>
-        {/* <div className="LogoHome">
-          <img
-            className="LogoIriyajo"
-            src="../src/assets/images/Iriyajo.jpg"
-            alt="logo Iriyajo"
-          />
-        </div> */}
+    <div className="navbar1">
+      <NavLink to="/" className="logo">
+        <img
+          className="Iriyajo"
+          src="../src/assets/images/NavBar/Iriyajo2.png"
+          alt="logo Iriyajo"
+        />
+      </NavLink>
+      <div className="loginsign">
+        <NavLink to="" className="login">
+          <img className="imagenav" src={login} alt="login" />
+        </NavLink>
+        <NavLink to="" className="signup">
+          <img className="imagenav" src={signup} alt="signup" />
+        </NavLink>
       </div>
-    </main>
+    </div>
   );
 }
 
