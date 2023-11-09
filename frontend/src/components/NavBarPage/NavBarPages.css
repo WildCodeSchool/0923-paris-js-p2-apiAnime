@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
+}
 .NavBarHome {
   height: 10rem;
   display: flex;
@@ -6,7 +10,7 @@
 .IriyajoLogo {
   height: 10rem;
   position: relative;
-  bottom: 4rem;
+  bottom: 7.5rem;
 }
 .IriyajoLogo2 {
   height: 10rem;
@@ -22,17 +26,23 @@
   margin-top: 1rem;
 }
 .NavLink {
-  font-size: 1.5rem;
-  padding-top: 0.1rem;
   display: flex;
-  justify-content: end;
-  gap: 9rem;
-  padding: 10px 21px;
+  justify-content: center;
+  font-size: 1.7rem;
+  gap: 5rem;
+  padding: 10px 20px;
   border-radius: 10px;
+  margin-left: 6rem;
 }
-#textNavBar {
-  background-color: black;
-  padding: 10px 21px;
-  border-radius: 10px;
-  opacity: 70%;
+.ImageNavLink {
+  height: 5rem;
+}
+.textNavBar {
+  font-family: Bangers;
+  text-shadow: 0px 0px 20px #36e9fd;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 3.5rem;
+  left: 1rem;
 }

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: BlackOpsOne;
-  src: url(BlackOpsOne-Regular.ttf);
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
 }
 #PageSelection {
   background-image: url("../src/components/imageBackground/BackgroundSunset.jpg");
@@ -25,12 +25,14 @@ img {
 }
 .titreAnime {
   font-size: 1.5rem;
+  font-family: Bangers;
   color: white;
   text-align: left;
 }
 .CategorieAnime {
-  font-family: BlackOpsOne;
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
   color: white;
-  font-size: 3.5rem;
-  margin-left: 42rem;
+  font-size: 10rem;
+  margin-left: 34rem;
 }

@@ -39,11 +39,13 @@ function Shojo() {
           {mangas.map((manga) => {
             return (
               <div key={manga.mal_id}>
-                <img
-                  className="imageAnime"
-                  src={manga.images.jpg.image_url}
-                  alt=""
-                />
+                <a href="Description">
+                  <img
+                    className="imageAnime"
+                    src={manga.images.jpg.image_url}
+                    alt=""
+                  />
+                </a>
                 <p className="titreAnime">{manga.title}</p>
               </div>
             );

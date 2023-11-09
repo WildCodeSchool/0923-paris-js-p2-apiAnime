@@ -2,9 +2,9 @@
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
-import "./lastPage.css";
+import "./description.css";
 
-function LastPage() {
+function Description() {
   return (
     <body id="PageResume">
       <NavLinkPage />
@@ -37,4 +37,4 @@ function LastPage() {
   );
 }
 
-export default LastPage;
+export default Description;

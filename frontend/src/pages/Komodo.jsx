@@ -34,16 +34,18 @@ function Kimodo() {
       <NavBarPages />
       <LoginSignup />
       <div>
-        <h1 className="CategorieAnime">KOMODO</h1>
+        <h1 className="CategorieAnime">KÔMODO</h1>
         <div className="resume">
           {mangas.map((manga) => {
             return (
               <div key={manga.mal_id}>
-                <img
-                  className="imageAnime"
-                  src={manga.images.jpg.image_url}
-                  alt=""
-                />
+                <a href="Description">
+                  <img
+                    className="imageAnime"
+                    src={manga.images.jpg.image_url}
+                    alt=""
+                  />
+                </a>
                 <p className="titreAnime">{manga.title}</p>
               </div>
             );
