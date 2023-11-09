@@ -1,4 +1,4 @@
-#PageSelection {
+.PageSelection {
   background-image: url("../src/components/imageBackground/BackgroundSunset.jpg");
   background-size: cover;
   margin: 0;
@@ -20,7 +20,7 @@ p {
   position: relative;
   bottom: 2rem;
 }
-#text {
+.text {
   background-color: white;
   font-size: 2rem;
   border-radius: 50%;

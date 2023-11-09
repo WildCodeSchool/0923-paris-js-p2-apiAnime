@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import LoginSignup from "../components/NavBarPage/LoginSignupPages";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
@@ -6,43 +7,59 @@ import "./Seinen.css";
 
 function Kimodo() {
   const [mangas, setMangas] = useState([]);
+  const [current, setCurrent] = useState(1);
+  const Next = () => setCurrent(current + 1);
+  const Previous = () => setCurrent(current - 1);
+  const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/manga?page=3`)
+    fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
-      .then((data) => setMangas(data.data));
+      .then((data) => {
+        setCurrent(data.pagination.current_page);
+        setMangas(data.data);
+      });
   }, []);
+
+  useEffect(() => {
+    if (current !== 1) {
+      fetch(`https://api.jikan.moe/v4/anime?genres=17page=${current}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setMangas(data.data);
+        });
+    }
+  }, [current]);
   return (
-    <body id="PageSelection">
+    <main className="PageSelection">
       <NavLinkPage />
       <NavBarPages />
       <LoginSignup />
       <div>
         <h2 className="h2">la page Shoujo</h2>
-        <div>
-          {mangas.map((manga) => {
-            return (
-              <div key={manga.mal_id}>
-                {manga.demographics.map((item) => {
-                  return (
-                    <div key={item.name}>
-                      {item.name === "Shoujo" && (
-                        <div>
-                          <p> titre: {manga.title}</p>
-                          <img src={manga.images.jpg.image_url} alt="" />
-                          <p> titre: {manga.title}</p>
-                          <p> type: {manga.type}</p>
-                          <p> score: {manga.score}</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+        {mangas.map((manga) => {
+          return (
+            <div key={manga.mal_id}>
+              <button
+                type="button"
+                onClick={() => navigate(`/Lastpage/${manga.mal_id}`)}
+              >
+                <p> titre: {manga.title}</p>
+                <img src={manga.images.jpg.image_url} alt="" />
+                <p> titre: {manga.title}</p>
+                <p> type: {manga.type}</p>
+                <p> score: {manga.score}</p>
+              </button>
+            </div>
+          );
+        })}
+        <button type="button" onClick={Previous}>
+          Previous
+        </button>
+        <button type="button" onClick={Next}>
+          Next
+        </button>
       </div>
-    </body>
+    </main>
   );
 }
 
