@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
+import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
 function Shojo() {
@@ -8,6 +10,7 @@ function Shojo() {
   const [viewButton, setViewButton] = useState(true);
   const next = () => setCurrent(current + 1);
   const previous = () => setCurrent(current - 1);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(`https://api.jikan.moe/v4/anime?genres=18`)
       .then((res) => res.json())
@@ -26,8 +29,6 @@ function Shojo() {
       fetch(`https://api.jikan.moe/v4/anime?genres=18&page=${current + 1}`)
         .then((res) => res.json())
         .then((data) => {
-          console.info("data", data);
-          // setMangas(data.data);
           if (data.data.length === 0) {
             setViewButton(false);
           } else {
@@ -39,19 +40,23 @@ function Shojo() {
   return (
     <main className="PageSelection">
       <NavLinkPage />
+      <NavBarPages />
       <div>
         <center className="CategorieAnime">SHÔUJO</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
               <div key={manga.mal_id}>
-                <a href="Description">
+                <button
+                  type="button"
+                  onClick={() => navigate(`/lastPage/${manga.mal_id}`)}
+                >
                   <img
                     className="imageAnime"
                     src={manga.images.jpg.image_url}
                     alt=""
                   />
-                </a>
+                </button>
                 <p className="titreAnime">{manga.title}</p>
               </div>
             );

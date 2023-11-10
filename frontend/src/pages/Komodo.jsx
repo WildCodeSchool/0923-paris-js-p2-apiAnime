@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import "./categorie.css";
 
@@ -8,6 +9,7 @@ function Kimodo() {
   const [viewButton, setViewButton] = useState(true);
   const next = () => setCurrent(current + 1);
   const previous = () => setCurrent(current - 1);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
@@ -43,13 +45,16 @@ function Kimodo() {
           {mangas.map((manga) => {
             return (
               <div key={manga.mal_id}>
-                <a href="Description">
+                <button
+                  type="button"
+                  onClick={() => navigate(`/lastPage/${manga.mal_id}`)}
+                >
                   <img
                     className="imageAnime"
                     src={manga.images.jpg.image_url}
                     alt=""
                   />
-                </a>
+                </button>
                 <p className="titreAnime">{manga.title}</p>
               </div>
             );

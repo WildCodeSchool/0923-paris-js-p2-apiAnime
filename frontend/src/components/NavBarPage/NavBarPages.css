@@ -1,0 +1,30 @@
+.navbar1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.Iriyajo {
+  width: 90%;
+}
+.loginsign {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  overflow: hidden;
+}
+.imagenav {
+  overflow: hidden;
+  width: 100%;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 426px) {
+  .Iriyajo {
+    width: 50%;
+  }
+  .loginsign {
+    width: 50%;
+    overflow: hidden;
+  }
+}

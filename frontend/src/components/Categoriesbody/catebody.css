@@ -1,0 +1,119 @@
+.contaih2 {
+  background-color: #ffffffbf;
+  border-radius: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.h2cat {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(
+    1000deg,
+    rgb(8, 4, 248) 40%,
+    rgb(5, 243, 116) 50%,
+    rgb(243, 3, 3) 65%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.containercat {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 5vw);
+  grid-gap: 1.5rem;
+  gap: 20px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 3%;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.containercat .seinen {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.containercat .shonen {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.containercat .shojo {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.containercat .kimodo {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.groupe {
+  background-color: #fffefe80;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.imgcat {
+  max-width: 90%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+.imgcatshonen {
+  max-width: 80%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+.buttoncateg {
+  padding: 5%;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  border: solid 0.2rem #000000;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 426px) {
+  .h2cat {
+    font-size: 1.5rem;
+  }
+  .containercat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 40vw);
+    width: 80%;
+  }
+  .containercat .seinen,
+  .containercat .shojo,
+  .containercat .shonen,
+  .containercat .kimodo {
+    grid-column-start: initial;
+    grid-column-end: initial;
+    grid-row-start: initial;
+    grid-row-end: initial;
+  }
+  .buttoncateg {
+    padding: 5%;
+    font-size: 15px;
+  }
+}
