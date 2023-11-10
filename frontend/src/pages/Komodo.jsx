@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
-import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
 function Kimodo() {
@@ -14,6 +12,7 @@ function Kimodo() {
     fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
       .then((data) => {
+        setCurrent(data.pagination.current_page);
         setMangas(data.data);
       });
   }, []);
@@ -27,8 +26,6 @@ function Kimodo() {
       fetch(`https://api.jikan.moe/v4/anime?genres=17&page=${current + 1}`)
         .then((res) => res.json())
         .then((data) => {
-          console.info("data", data);
-          // setMangas(data.data);
           if (data.data.length === 0) {
             setViewButton(false);
           } else {
@@ -37,31 +34,11 @@ function Kimodo() {
         });
     }
   }, [current]);
-
-  // useEffect(() => {
-  //   fetch(`https://api.jikan.moe/v4/anime`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.info(data.data);
-  //       const tabData = [];
-  //       const dataManga = data.data;
-  //       for (let i = 0; i < dataManga.length; i += 1) {
-  //         for (let n = 0; n < dataManga[i].demographics.length; n += 1) {
-  //           if (dataManga[i].demographics[n].name === "Shoujo") {
-  //             tabData.push(dataManga[i]);
-  //           }
-  //         }
-  //       }
-  //       setMangas(tabData);
-  //     });
-  // }, []);
   return (
     <main className="PageSelection">
       <NavLinkPage />
-      <NavBarPages />
-      <LoginSignup />
       <div>
-        <h1 className="CategorieAnime">KÔMODO</h1>
+        <center className="CategorieAnime">KÔMODO</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
@@ -77,17 +54,27 @@ function Kimodo() {
               </div>
             );
           })}
-          {current <= 1 ? null : (
-            <button type="button" onClick={previous}>
-              Previous
-            </button>
-          )}
-          {viewButton ? (
-            <button type="button" onClick={next}>
-              Next
-            </button>
-          ) : null}
         </div>
+      </div>
+      <div className="ButtonNav">
+        {current <= 1 ? null : (
+          <button type="button" onClick={previous}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/ButtonPrev.png"
+              alt="Button Prev"
+            />
+          </button>
+        )}
+        {viewButton ? (
+          <button type="button" onClick={next}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/ButtonNext.png"
+              alt="Button Next"
+            />
+          </button>
+        ) : null}
       </div>
     </main>
   );

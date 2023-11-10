@@ -6,7 +6,7 @@ import "./description.css";
 
 function Description() {
   return (
-    <body id="PageResume">
+    <main className="PageResume">
       <NavLinkPage />
       <NavBarPages />
       <LoginSignup />
@@ -33,7 +33,7 @@ function Description() {
           alt="Pop Shenron"
         />
       </div>
-    </body>
+    </main>
   );
 }
 

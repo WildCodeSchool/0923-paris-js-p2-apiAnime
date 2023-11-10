@@ -21,18 +21,31 @@ img {
   border-radius: 10%;
 }
 .imageAnime:hover {
-  opacity: 0.8;
+  transform: scale(1.2);
 }
 .titreAnime {
   font-size: 1.5rem;
   font-family: Bangers;
   color: white;
-  text-align: left;
+  margin-right: 2rem;
 }
 .CategorieAnime {
   font-family: Bangers;
   text-shadow: 0 0 10px #36e9fd;
   color: white;
   font-size: 10rem;
-  margin-left: 34rem;
+}
+.ButtonNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ButtonNav button {
+  height: 5rem;
+  background-color: transparent;
+  border-radius: 10%;
+  border-style: none;
+}
+
+.ButtonNextPrev {
+  height: 5.3rem;
 }

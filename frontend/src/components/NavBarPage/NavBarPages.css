@@ -2,29 +2,6 @@
   font-family: Bangers;
   src: url(Bangers-Regular.ttf);
 }
-.NavBarHome {
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-}
-.IriyajoLogo {
-  height: 10rem;
-  position: relative;
-  bottom: 7.5rem;
-}
-.IriyajoLogo2 {
-  height: 10rem;
-}
-.AkatsukiLogo {
-  height: 8rem;
-  width: 17rem;
-  margin-bottom: 1rem;
-}
-.NuageMagikLogo {
-  height: 9rem;
-  width: 17rem;
-  margin-top: 1rem;
-}
 .NavLink {
   display: flex;
   justify-content: center;
@@ -32,7 +9,7 @@
   gap: 5rem;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-left: 6rem;
+  text-decoration: none;
 }
 .ImageNavLink {
   height: 5rem;

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
-import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
 function Shojo() {
@@ -38,31 +36,11 @@ function Shojo() {
         });
     }
   }, [current]);
-
-  // useEffect(() => {
-  //   fetch(`https://api.jikan.moe/v4/anime?page=20`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.info(data.data);
-  //       const tabData = [];
-  //       const dataManga = data.data;
-  //       for (let i = 0; i < dataManga.length; i += 1) {
-  //         for (let n = 0; n < dataManga[i].demographics.length; n += 1) {
-  //           if (dataManga[i].demographics[n].name === "Shoujo") {
-  //             tabData.push(dataManga[i]);
-  //           }
-  //         }
-  //       }
-  //       setMangas(tabData);
-  //     });
-  // }, []);
   return (
     <main className="PageSelection">
       <NavLinkPage />
-      <NavBarPages />
-      <LoginSignup />
       <div>
-        <h1 className="CategorieAnime">SHÔUJO</h1>
+        <center className="CategorieAnime">SHÔUJO</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
@@ -78,14 +56,24 @@ function Shojo() {
               </div>
             );
           })}
+        </div>
+        <div className="ButtonNav">
           {current <= 1 ? null : (
             <button type="button" onClick={previous}>
-              Previous
+              <img
+                className="ButtonNextPrev"
+                src="../src/assets/images/NavBar/ButtonPrev.png"
+                alt="Button Prev"
+              />
             </button>
           )}
           {viewButton ? (
             <button type="button" onClick={next}>
-              Next
+              <img
+                className="ButtonNextPrev"
+                src="../src/assets/images/NavBar/ButtonNext.png"
+                alt="Button Next"
+              />
             </button>
           ) : null}
         </div>
