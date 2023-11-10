@@ -15,7 +15,7 @@ function Footer() {
     <div className="footer">
       <h2 className="h2">CONTACT</h2>
       <p className="text">
-        Vous avez des questions ? Vous avez besoin d&#39;un renseignement ?
+        Vous avez des questions ? Vous avez besoin d'un renseignement ?
       </p>
       <div>
         {display && (

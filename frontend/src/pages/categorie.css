@@ -1,0 +1,56 @@
+@font-face {
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
+}
+.PageSelection {
+  background-image: url("../src/components/imageBackground/BackgroundSunset.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+.resume {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+  justify-content: space-between;
+  margin-left: 2rem;
+  gap: 50px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.resume button {
+  background-color: transparent;
+  border-style: none;
+}
+img {
+  border-radius: 10%;
+}
+.imageAnime:hover {
+  transform: scale(1.2);
+}
+.titreAnime {
+  font-size: 1.5rem;
+  font-family: Bangers;
+  color: white;
+  margin-right: 2rem;
+}
+.CategorieAnime {
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
+  color: white;
+  font-size: 10rem;
+}
+.ButtonNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ButtonNav button {
+  height: 5rem;
+  background-color: transparent;
+  border-radius: 10%;
+  border-style: none;
+}
+
+.ButtonNextPrev {
+  height: 5.3rem;
+}

@@ -4,7 +4,7 @@ import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
-function Seinen() {
+function Kimodo() {
   const [mangas, setMangas] = useState([]);
   const [current, setCurrent] = useState(1);
   const [viewButton, setViewButton] = useState(true);
@@ -12,7 +12,7 @@ function Seinen() {
   const previous = () => setCurrent(current - 1);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime?genres=42`)
+    fetch(`https://api.jikan.moe/v4/anime?genres=17`)
       .then((res) => res.json())
       .then((data) => {
         setCurrent(data.pagination.current_page);
@@ -22,11 +22,11 @@ function Seinen() {
 
   useEffect(() => {
     if (current !== 1) {
-      fetch(`https://api.jikan.moe/v4/anime?genres=42&page=${current}`)
+      fetch(`https://api.jikan.moe/v4/anime?genres=17&page=${current}`)
         .then((res) => res.json())
         .then((data) => setMangas(data.data));
 
-      fetch(`https://api.jikan.moe/v4/anime?genres=42&page=${current + 1}`)
+      fetch(`https://api.jikan.moe/v4/anime?genres=17&page=${current + 1}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.data.length === 0) {
@@ -42,7 +42,7 @@ function Seinen() {
       <NavBarPages />
       <NavLinkPage />
       <div>
-        <center className="CategorieAnime">SEINEN</center>
+        <center className="CategorieAnime">KÔMODO</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
@@ -57,34 +57,34 @@ function Seinen() {
                     alt=""
                   />
                 </button>
-                <center className="titreAnime">{manga.title}</center>
+                <p className="titreAnime">{manga.title}</p>
               </div>
             );
           })}
         </div>
-        <div className="ButtonNav">
-          {current <= 1 ? null : (
-            <button type="button" onClick={previous}>
-              <img
-                className="ButtonNextPrev"
-                src="../src/assets/images/NavBar/ButtonPrev.png"
-                alt="Button Prev"
-              />
-            </button>
-          )}
-          {viewButton ? (
-            <button type="button" onClick={next}>
-              <img
-                className="ButtonNextPrev"
-                src="../src/assets/images/NavBar/ButtonNext.png"
-                alt="Button Next"
-              />
-            </button>
-          ) : null}
-        </div>
+      </div>
+      <div className="ButtonNav">
+        {current <= 1 ? null : (
+          <button type="button" onClick={previous}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/ButtonPrev.png"
+              alt="Button Prev"
+            />
+          </button>
+        )}
+        {viewButton ? (
+          <button type="button" onClick={next}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/ButtonNext.png"
+              alt="Button Next"
+            />
+          </button>
+        ) : null}
       </div>
     </main>
   );
 }
 
-export default Seinen;
+export default Kimodo;

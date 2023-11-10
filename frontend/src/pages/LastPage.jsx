@@ -13,7 +13,6 @@ function LastPage() {
     fetch(`https://api.jikan.moe/v4/anime/${Id}`)
       .then((res) => res.json())
       .then((data) => setMangue(data.data));
-
     fetch(`https://api.jikan.moe/v4/anime/${Id}/full`)
       .then((res) => res.json())
       .then((data) => setGoyave(data.data));
@@ -23,7 +22,6 @@ function LastPage() {
     <div className="PageResume">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         {console.info("mangue", mangue)}
         {console.info("goyave", goyave)}

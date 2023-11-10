@@ -1,0 +1,25 @@
+@font-face {
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
+}
+.NavLink {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  gap: 5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.ImageNavLink {
+  height: 5rem;
+}
+.textNavBar {
+  font-family: Bangers;
+  text-shadow: 0px 0px 20px #36e9fd;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 3.5rem;
+  left: 1rem;
+}
