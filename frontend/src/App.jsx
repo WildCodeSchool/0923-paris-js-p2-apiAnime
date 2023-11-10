@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import Seinen from "./pages/Seinen";
 import Shonen from "./pages/Shonen";
 import Shojo from "./pages/Shojo";
@@ -11,7 +10,6 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/seinen" element={<Seinen />} />
         <Route path="/shonen" element={<Shonen />} />
         <Route path="/shojo" element={<Shojo />} />

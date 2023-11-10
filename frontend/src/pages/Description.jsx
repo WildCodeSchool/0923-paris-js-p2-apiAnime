@@ -1,15 +1,11 @@
 /* eslint-disable react/self-closing-comp */
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
-import LoginSignup from "../components/NavBarPage/LoginSignupPages";
-import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./description.css";
 
 function Description() {
   return (
     <main className="PageResume">
       <NavLinkPage />
-      <NavBarPages />
-      <LoginSignup />
       <div className="VideoResume">
         <h1>Résumé Vidéo</h1>
         <iframe
