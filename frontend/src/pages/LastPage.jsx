@@ -23,7 +23,6 @@ function LastPage() {
     <div className="PageResume">
       <NavLinkPage />
       <NavBarPages />
-      <LoginSignup />
       <div>
         {console.info("mangue", mangue)}
         {console.info("goyave", goyave)}

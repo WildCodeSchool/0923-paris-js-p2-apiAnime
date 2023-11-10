@@ -7,13 +7,13 @@ import Shojo from "./pages/Shojo";
 import Kimodo from "./pages/Kimodo";
 import LastPage from "./pages/LastPage";
 import Footer from "./components/Footer/Footer";
-import NavBarPages from "./components/NavBarPage/NavBarPages";
+// import NavBarPages from "./components/NavBarPage/NavBarPages";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <NavBarPages />
+      {/* <NavBarPages /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/seinen" element={<Seinen />} />

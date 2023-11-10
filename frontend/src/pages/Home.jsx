@@ -8,7 +8,6 @@ function Home() {
     <section>
       <main className="HomePage">
         <NavBarPages />
-        <LoginSignup />
         <Video />
         <img
           className="LogoIriyajo"
@@ -16,7 +15,7 @@ function Home() {
           alt="logo Iriyajo"
         />
       </main>
-        <Carousel />
+      <Carousel />
     </section>
   );
 }
