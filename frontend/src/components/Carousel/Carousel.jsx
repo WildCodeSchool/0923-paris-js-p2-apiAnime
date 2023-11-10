@@ -5,10 +5,12 @@ import bleach from "../../assets/bleach.jpg";
 import death from "../../assets/death.jpg";
 import goku from "../../assets/goku.jpg";
 import luffy from "../../assets/luffy.jpg";
+import Video from "../Video/Video";
 
 function Carousel() {
   return (
     <center className="Carousel">
+      <Video />
       <div className="box">
         <span className="onepics">
           <img src={bleach} alt="" />

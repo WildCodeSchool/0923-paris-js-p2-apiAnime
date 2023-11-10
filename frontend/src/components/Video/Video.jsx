@@ -14,8 +14,8 @@ function Video() {
         controls
         playing
         muted
-        width="15%"
-        height="15%"
+        width="20%"
+        height="20%"
         className="player"
         onEnded={videoEnded}
       />

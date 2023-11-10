@@ -39,8 +39,8 @@ function Seinen() {
   }, [current]);
   return (
     <main className="PageSelection">
-      <NavLinkPage />
       <NavBarPages />
+      <NavLinkPage />
       <div>
         <center className="CategorieAnime">SEINEN</center>
         <div className="resume">

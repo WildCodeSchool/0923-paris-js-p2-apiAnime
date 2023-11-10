@@ -5,16 +5,16 @@
   justify-content: center;
   align-items: center;
   right: 35px;
-  z-index: 1;
   min-height: 100vh; /*jouer ici pour la taille  la vraie valeur min-heigh 100vh*/
 }
 .box {
   position: relative;
-  bottom: 13rem;
+  bottom: 15rem;
   margin: 0;
   padding: 0;
   width: 15rem;
   height: 15rem;
+  /*debut carrussel*/
   transform-style: preserve-3d;
   animation: carousel 20s linear infinite;
 }
@@ -27,7 +27,6 @@
     transform: perspective(1000px) rotateY(360deg);
   }
 }
-
 .box span {
   position: absolute;
   top: 0;
@@ -59,7 +58,7 @@
 .sixpics {
   --i: 6;
 }
-
+/*FIN*/
 .box span img {
   position: absolute;
   top: 0;
@@ -67,4 +66,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }

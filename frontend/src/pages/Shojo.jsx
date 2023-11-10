@@ -39,8 +39,8 @@ function Shojo() {
   }, [current]);
   return (
     <main className="PageSelection">
-      <NavLinkPage />
       <NavBarPages />
+      <NavLinkPage />
       <div>
         <center className="CategorieAnime">SHÔUJO</center>
         <div className="resume">

@@ -40,8 +40,8 @@ function Shonen() {
   }, [current]);
   return (
     <main className="PageSelection">
-      <NavLinkPage />
       <NavBarPages />
+      <NavLinkPage />
       <div>
         <center className="CategorieAnime">SHÔUNEN</center>
         <div className="resume">

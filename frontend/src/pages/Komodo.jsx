@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
+import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
 function Kimodo() {
@@ -38,6 +39,7 @@ function Kimodo() {
   }, [current]);
   return (
     <main className="PageSelection">
+      <NavBarPages />
       <NavLinkPage />
       <div>
         <center className="CategorieAnime">KÔMODO</center>
