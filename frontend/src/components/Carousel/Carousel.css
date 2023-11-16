@@ -1,23 +1,26 @@
-.carousel {
+@font-face {
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
+}
+.PageSelec.carousel {
   margin: 0;
   padding: 0;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  right: 35px;
-  min-height: 100vh; /*jouer ici pour la taille  la vraie valeur min-heigh 100vh*/
 }
 .iri img {
   height: 10rem;
 }
 
 .box {
-  /* position: relative; */
-  bottom: 10rem;
+  position: relative;
+  top: 5rem;
   margin: 0;
   padding: 0;
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 17rem;
   /*debut carrussel*/
   transform-style: preserve-3d;
   animation: carousel 20s linear infinite;
@@ -28,7 +31,7 @@
     transform: perspective(1000px) rotateY(0deg);
   }
   100% {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: perspective(1000px) rotateY(260deg);
   }
 }
 .box span {
@@ -39,6 +42,7 @@
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
   -webkit-box-reflect: below 0px
     linear-gradient(transparent, transparent, #0004);
   transform: rotateY(calc(var(--i) * 60deg)) translateZ(400px);
@@ -72,16 +76,24 @@
   object-fit: cover;
   z-index: -1;
 }
+.AnimeText {
+  color: white;
+  font-size: 10rem;
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
+  margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 726px) {
-  .carousel {
+  /* .carousel {
     min-height: 40vh;
   }
   .box {
     width: 20%;
     height: 50%;
-  }
-  .iri img {
-    width: 100%;
-    height: 100%;
+  } */
+  .AnimeText {
+    font-size: 5rem;
+    margin-top: 0.5rem;
   }
 }

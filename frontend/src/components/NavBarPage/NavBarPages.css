@@ -2,23 +2,39 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  padding-top: 1rem;
 }
+
 .Iriyajo {
   width: 90%;
 }
-.loginsign {
-  display: flex;
-  justify-content: space-around;
-  width: 25%;
-  overflow: hidden;
+.Iriyajo:hover {
+  opacity: 90%;
 }
-.imagenav {
-  overflow: hidden;
-  width: 100%;
+
+.ImgLogin {
+  height: 8rem;
 }
-/* RESPONSIVE */
+
+.ImgLoginButton {
+  margin: 0;
+  border: transparent;
+  background-color: transparent;
+}
+.react-responsive-modal-modal {
+  max-width: 800px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  background: #ffffff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+  margin: 1.2rem;
+  padding: 1.2rem;
+  position: relative;
+  overflow-y: auto;
+  border-radius: 30px;
+}
+
 @media screen and (max-width: 726px) {
   .Iriyajo {
     width: 50%;

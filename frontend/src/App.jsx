@@ -25,10 +25,10 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/seinen" element={<Seinen />} />
+        <Route path="/komodo" element={<Komodo />} />
         <Route path="/shonen" element={<Shonen />} />
         <Route path="/shojo" element={<Shojo />} />
-        <Route path="/komodo" element={<Komodo />} />
+        <Route path="/seinen" element={<Seinen />} />
         <Route path="/LastPage/:Id" element={<LastPage />} />
       </Routes>
       <Footer />
