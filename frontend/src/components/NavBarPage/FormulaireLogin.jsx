@@ -1,8 +1,8 @@
 import { Modal } from "react-responsive-modal";
 import { useState } from "react";
-import "./formulaireLogin.css";
 import ImgAccountLogin from "../../assets/images/NavBar/ImgAccountLogin.png";
 import FormulaireSignUp from "./FormulaireSignUp";
+import "./formulaireLogin.css";
 
 function FormulaireLogin() {
   const [display2, setDisplay2] = useState(false);

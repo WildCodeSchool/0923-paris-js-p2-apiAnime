@@ -14,12 +14,7 @@ function Catebody() {
       </div>
       <div className="containercat">
         <div className="groupe seinen">
-          <img
-            className="imgcat"
-            src={imgkimodo}
-            alt="komodo"
-            // style={{ height: "260px" }}
-          />
+          <img className="imgcat" src={imgkimodo} alt="komodo" />
           <button
             className="buttoncateg"
             type="button"
@@ -29,12 +24,7 @@ function Catebody() {
           </button>
         </div>
         <div className="groupe shonen">
-          <img
-            className="imgcat"
-            src={imgshonen}
-            alt="shonen"
-            // style={{ height: "220px" }}
-          />
+          <img className="imgcat" src={imgshonen} alt="shonen" />
           <button
             className="buttoncateg"
             type="button"
@@ -44,12 +34,7 @@ function Catebody() {
           </button>
         </div>
         <div className="groupe shojo">
-          <img
-            className="imgcat"
-            src={imgshojo}
-            alt="shojo"
-            // style={{ height: "263px" }}
-          />
+          <img className="imgcat" src={imgshojo} alt="shojo" />
           <button
             className="buttoncateg"
             type="button"
@@ -59,12 +44,7 @@ function Catebody() {
           </button>
         </div>
         <div className="groupe kimodo">
-          <img
-            className="imgcat"
-            src={imgseinen}
-            alt="seinen"
-            // style={{ height: "254px", maxwidth: "259px" }}
-          />
+          <img className="imgcat" src={imgseinen} alt="seinen" />
           <button
             className="buttoncateg"
             type="button"

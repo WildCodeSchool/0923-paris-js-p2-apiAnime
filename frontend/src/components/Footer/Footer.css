@@ -266,7 +266,7 @@ a:hover {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 726px) {
   .h2 {
     margin-left: 0;
     padding: 1rem;

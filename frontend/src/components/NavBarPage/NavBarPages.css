@@ -35,19 +35,7 @@
   border-radius: 30px;
 }
 
-/* .loginsign {
-  display: flex;
-  justify-content: space-around;
-  width: 25%;
-  overflow: hidden;
-}
-.imagenav {
-  overflow: hidden;
-  width: 100%;
-} */
-/* RESPONSIVE */
-
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 726px) {
   .Iriyajo {
     width: 50%;
   }

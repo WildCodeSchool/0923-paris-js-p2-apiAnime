@@ -1,23 +1,19 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import internalSource from "../../assets/video/video.mp4";
+import internalSource from "./assets/video/video.mp4";
 import "./video.css";
 
 function Video() {
-  // const videoEnded = () => {
-  //   alert("video terminer");
-  // };
   return (
     <div className="player-wrapper">
       <ReactPlayer
         url={internalSource}
-        controls
         playing
+        controls
         muted
-        width="120%"
+        width="100%"
         height="100%"
         className="player"
-        // onEnded={videoEnded}
       />
     </div>
   );

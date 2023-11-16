@@ -8,48 +8,44 @@ function Shojo() {
   const [mangas, setMangas] = useState([]);
   const [current, setCurrent] = useState(1);
   const [viewButton, setViewButton] = useState(true);
+  const [numberOfImagesToDisplay, setNumberOfImagesToDisplay] = useState(25);
   const next = () => setCurrent(current + 1);
   const previous = () => setCurrent(current - 1);
   const navigate = useNavigate();
+
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime?genres=18`)
+    fetch(
+      `https://api.jikan.moe/v4/anime?genres=18&page=${current}&limit=${numberOfImagesToDisplay}`
+    )
       .then((res) => res.json())
       .then((data) => {
-        setCurrent(data.pagination.current_page);
         setMangas(data.data);
+        setViewButton(data.pagination.has_next_page);
       });
-  }, []);
-
+  }, [current, numberOfImagesToDisplay]);
   useEffect(() => {
-    if (current !== 1) {
-      fetch(`https://api.jikan.moe/v4/anime?genres=18&page=${current}`)
-        .then((res) => res.json())
-        .then((data) => setMangas(data.data));
-
-      fetch(`https://api.jikan.moe/v4/anime?genres=18&page=${current + 1}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.data.length === 0) {
-            setViewButton(false);
-          } else {
-            setViewButton(true);
-          }
-        });
+    if (window.matchMedia("(max-width: 425px)").matches) {
+      setNumberOfImagesToDisplay(4);
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
+      setNumberOfImagesToDisplay(6);
+    } else if (window.matchMedia("(max-width: 1024px)").matches) {
+      setNumberOfImagesToDisplay(10);
     }
-  }, [current]);
+  }, []);
   return (
     <main className="PageSelection">
       <NavBarPages />
       <NavLinkPage />
-      <div>
+      <div className="container">
         <center className="CategorieAnime">SHÔUJO</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
-              <div key={manga.mal_id}>
+              <div className="ines" key={manga.mal_id}>
                 <button
                   type="button"
                   onClick={() => navigate(`/lastPage/${manga.mal_id}`)}
+                  className="manga"
                 >
                   <img
                     className="imageAnime"
