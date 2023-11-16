@@ -1,4 +1,4 @@
-/* eslint-disable react/self-closing-comp */
+import ReactPlayer from "react-player/youtube";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavLinkPage from "../components/NavBarPage/NavLinkPage";
@@ -10,42 +10,50 @@ function LastPage() {
   const [mangue, setMangue] = useState({});
   const [goyave, setGoyave] = useState({});
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime/${Id}`)
+    fetch(`https://api.jikan.moe/v4/anime/${Id}/videos`)
       .then((res) => res.json())
       .then((data) => setMangue(data.data));
     fetch(`https://api.jikan.moe/v4/anime/${Id}/full`)
       .then((res) => res.json())
       .then((data) => setGoyave(data.data));
   }, []);
-
   return (
     <div className="PageResume">
-      <NavLinkPage />
       <NavBarPages />
-      <div>
-        {console.info("mangue", mangue)}
-        {console.info("goyave", goyave)}
+      <NavLinkPage />
+      <div className="principal">
         <div className="VideoResume">
           <h1>{mangue.title}</h1>
-          <img src={mangue.images?.jpg?.image_url} alt="" />
-          <p className="TextResume">{mangue.synopsis}</p>
+          <img src={goyave.images?.jpg?.image_url} alt="" />
+          <p className="TextResume">{goyave.synopsis}</p>
           <h2>Résumé Vidéo</h2>
-          <iframe
-            width="650"
-            height="400"
-            src={mangue.trailer?.youtube_id?.url?.embed_url}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-
-          {goyave.external?.map((externe) => {
+          <div className="player-wrapper">
+            <ReactPlayer
+              url={goyave?.trailer?.url}
+              playing
+              controls
+              muted
+              width="100%"
+              height="100%"
+              className="player"
+            />
+          </div>
+        </div>
+        <div className="titre">
+          <h2>Episodes</h2>
+        </div>
+        <div className="affiche">
+          {mangue.episodes?.map((episode) => {
             return (
-              <ul key={externe.url}>
-                <li>
-                  <a href={externe.url}>{externe.name}</a>
-                </li>
-              </ul>
+              <div className="episode" key={episode.mal_id}>
+                <a className="yaya" href={episode.url}>
+                  <img
+                    src={episode?.images?.jpg.image_url}
+                    alt={episode.title}
+                    className="riri"
+                  />
+                </a>
+              </div>
             );
           })}
         </div>
@@ -55,6 +63,17 @@ function LastPage() {
             src="../src/assets/images/PopShenron.png"
             alt="Pop Shenron"
           />
+          <div className="jojo">
+            {goyave.external?.map((externe) => {
+              return (
+                <ul key={externe.url}>
+                  <li>
+                    <a href={externe.url}>{externe.name}</a>
+                  </li>
+                </ul>
+              );
+            })}
+          </div>
           <img
             className="PopShenron"
             src="../src/assets/images/PopShenron.png"

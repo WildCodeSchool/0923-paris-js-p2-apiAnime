@@ -5,12 +5,11 @@ import bleach from "../../assets/bleach.jpg";
 import death from "../../assets/death.jpg";
 import goku from "../../assets/goku.jpg";
 import luffy from "../../assets/luffy.jpg";
-import Video from "../Video/Video";
+import iriyajo from "../../assets/Iriyajo.jpg";
 
 function Carousel() {
   return (
     <center className="Carousel">
-      <Video />
       <div className="box">
         <span className="onepics">
           <img src={bleach} alt="" />
@@ -27,6 +26,9 @@ function Carousel() {
         <span className="fivepics">
           <img src={luffy} alt="" />
         </span>
+        <div className="iri">
+          <img src={iriyajo} alt="" />
+        </div>
         <span className="sixpics">
           <img src={death} alt="" />
         </span>

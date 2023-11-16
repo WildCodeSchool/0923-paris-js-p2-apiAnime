@@ -93,7 +93,7 @@
   border: solid 0.2rem #000000;
 }
 /* RESPONSIVE */
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 726px) {
   .h2cat {
     font-size: 1.5rem;
   }
