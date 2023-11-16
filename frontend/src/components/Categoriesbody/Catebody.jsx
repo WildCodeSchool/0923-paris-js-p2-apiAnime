@@ -16,21 +16,21 @@ function Catebody() {
         <div className="groupe seinen">
           <img
             className="imgcat"
-            src={imgseinen}
-            alt="seinen"
+            src={imgkimodo}
+            alt="komodo"
             // style={{ height: "260px" }}
           />
           <button
             className="buttoncateg"
             type="button"
-            onClick={() => navigate("/seinen")}
+            onClick={() => navigate("/komodo")}
           >
-            Seinen
+            Komodo
           </button>
         </div>
         <div className="groupe shonen">
           <img
-            className="imgcatshonen"
+            className="imgcat"
             src={imgshonen}
             alt="shonen"
             // style={{ height: "220px" }}
@@ -61,16 +61,16 @@ function Catebody() {
         <div className="groupe kimodo">
           <img
             className="imgcat"
-            src={imgkimodo}
-            alt="kimodo"
+            src={imgseinen}
+            alt="seinen"
             // style={{ height: "254px", maxwidth: "259px" }}
           />
           <button
             className="buttoncateg"
             type="button"
-            onClick={() => navigate("/kimodo")}
+            onClick={() => navigate("/seinen")}
           >
-            Komodo
+            Seinen
           </button>
         </div>
       </div>

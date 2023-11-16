@@ -20,8 +20,8 @@ function LastPage() {
 
   return (
     <div className="PageResume">
-      <NavLinkPage />
       <NavBarPages />
+      <NavLinkPage />
       <div>
         {console.info("mangue", mangue)}
         {console.info("goyave", goyave)}

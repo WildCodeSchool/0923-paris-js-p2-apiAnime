@@ -73,17 +73,17 @@
 }
 
 .imgcat {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
-  height: auto;
+  height: 11vw;
   overflow: hidden;
 }
-.imgcatshonen {
-  max-width: 80%;
+/* .imgcatshonen {
+  max-width: 100%;
   margin: 0 auto;
-  height: auto;
+  height: 13vw;
   overflow: hidden;
-}
+} */
 .buttoncateg {
   padding: 5%;
   border-radius: 0.5rem;
@@ -92,7 +92,22 @@
   font-weight: 700;
   border: solid 0.2rem #000000;
 }
+.buttoncateg:hover {
+  background-color: rgba(49, 49, 49, 0.567);
+}
 /* RESPONSIVE */
+@media screen and (max-width: 769px) {
+  .containercat {
+    width: 80%;
+  }
+  .buttoncateg {
+    padding: 5%;
+    font-size: 16px;
+  }
+  .imgcat {
+    height: 12vw;
+  }
+}
 @media screen and (max-width: 426px) {
   .h2cat {
     font-size: 1.5rem;
@@ -115,5 +130,8 @@
   .buttoncateg {
     padding: 5%;
     font-size: 15px;
+  }
+  .imgcat {
+    height: 22vw;
   }
 }

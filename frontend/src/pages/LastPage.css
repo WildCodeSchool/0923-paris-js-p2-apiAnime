@@ -1,6 +1,7 @@
 .PageResume {
   background-image: url("../src/components/imageBackground/BackgroundNight.jpg");
   background-size: cover;
+  background-attachment: fixed;
   margin: 0;
 }
 .ImgShenron {

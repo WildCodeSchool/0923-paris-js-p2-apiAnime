@@ -4,3 +4,55 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.input {
+  font-size: 2rem;
+  width: 50%;
+  margin: 0 auto;
+}
+.chain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.popEcran {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 80rem;
+  top: 0.4rem;
+}
+.popjaune {
+  position: relative;
+  top: 1.8rem;
+}
+
+.chaine1 {
+  margin-bottom: -3rem;
+  transform: rotate(330deg);
+  height: 250px;
+}
+.chaine2 {
+  margin-bottom: -2rem;
+  transform: rotate(-330deg);
+  height: 250px;
+}
+
+.carrouu {
+  background-color: rgba(49, 49, 49, 0.8);
+  width: 85%;
+  margin: 0 auto;
+  border: 0.4rem solid black;
+  border-radius: 2rem;
+  height: 85vh;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 426px) {
+  .chaine1 {
+    height: 129px;
+  }
+  .chaine2 {
+    height: 129px;
+  }
+}

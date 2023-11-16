@@ -68,7 +68,7 @@ function Kimodo() {
           <button type="button" onClick={previous}>
             <img
               className="ButtonNextPrev"
-              src="../src/assets/images/NavBar/ButtonPrev.png"
+              src="../src/assets/images/NavBar/KunaiPrevTrans.png"
               alt="Button Prev"
             />
           </button>
@@ -77,7 +77,7 @@ function Kimodo() {
           <button type="button" onClick={next}>
             <img
               className="ButtonNextPrev"
-              src="../src/assets/images/NavBar/ButtonNext.png"
+              src="../src/assets/images/NavBar/KunaiNextTrans.png"
               alt="Button Next"
             />
           </button>

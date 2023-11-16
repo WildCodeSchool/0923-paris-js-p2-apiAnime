@@ -4,9 +4,9 @@ import internalSource from "../../assets/video/video.mp4";
 import "./video.css";
 
 function Video() {
-  const videoEnded = () => {
-    alert("video terminer");
-  };
+  // const videoEnded = () => {
+  //   alert("video terminer");
+  // };
   return (
     <div className="player-wrapper">
       <ReactPlayer
@@ -14,10 +14,10 @@ function Video() {
         controls
         playing
         muted
-        width="20%"
-        height="20%"
+        width="120%"
+        height="100%"
         className="player"
-        onEnded={videoEnded}
+        // onEnded={videoEnded}
       />
     </div>
   );

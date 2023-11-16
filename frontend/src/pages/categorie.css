@@ -43,6 +43,8 @@ img {
 .ButtonNav {
   display: flex;
   justify-content: space-evenly;
+  padding-left: 30rem;
+  padding-right: 30rem;
 }
 .ButtonNav button {
   height: 5rem;
@@ -52,5 +54,5 @@ img {
 }
 
 .ButtonNextPrev {
-  height: 5.3rem;
+  height: 5rem;
 }
