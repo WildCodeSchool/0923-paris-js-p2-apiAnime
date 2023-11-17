@@ -15,7 +15,7 @@ function Komodo() {
 
   useEffect(() => {
     fetch(
-      `https://api.jikan.moe/v4/anime?genres=17&page=${current}&limit=${numberOfImagesToDisplay}`
+      `https://api.jikan.moe/v4/anime?genres=15&page=${current}&limit=${numberOfImagesToDisplay}`
     )
       .then((res) => res.json())
       .then((data) => {
