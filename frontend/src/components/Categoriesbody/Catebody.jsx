@@ -24,7 +24,7 @@ function Catebody() {
 
   return (
     <section className="catbody">
-      <form>
+      <form className="alex">
         <div className="input-wrapper">
           <input
             placeholder="Search your anime"
@@ -37,7 +37,7 @@ function Catebody() {
           <img src={iriyajo} alt="" onClick={handleClick} className="bouton" />
         </div>
         {trouve.length > 0 && (
-          <select onChange={handleSelectChange}>
+          <select onChange={handleSelectChange} className="listes">
             {trouve.map((manga) => (
               <option key={manga.mal_id} value={manga.title}>
                 {manga.title}
