@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setVideo(false);
-    }, 8000);
+    }, 6000);
   }, []);
 
   if (video) {

@@ -48,7 +48,7 @@
   margin: 0 auto;
   border: 0.4rem solid black;
   border-radius: 2rem;
-  height: 90vh;
+  height: 50vh;
   margin-bottom: 2rem;
   overflow: hidden;
 }
@@ -63,7 +63,7 @@
     height: 129px;
   }
   .carrouu {
-    height: 37vh;
+    height: 21vh;
     margin-bottom: 3rem;
   }
   .popsakura,
