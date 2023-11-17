@@ -16,24 +16,9 @@ function Home() {
         <div className="chain">
           <img className="chaine1" src={chaine1} alt="seinen" />
           <div className="popEcran">
-            <img
-              className="popsakura"
-              src={Sakura}
-              alt="seinen"
-              style={{ height: "150px" }}
-            />
-            <img
-              className="popjaune"
-              src={popjaune}
-              alt="seinen"
-              style={{ height: "120px" }}
-            />
-            <img
-              className="poptruncks"
-              src={Truncks}
-              alt="seinen"
-              style={{ height: "150px" }}
-            />
+            <img className="popsakura" src={Sakura} alt="seinen" />
+            <img className="popjaune" src={popjaune} alt="seinen" />
+            <img className="poptruncks" src={Truncks} alt="seinen" />
           </div>
           <img className="chaine2" src={chaine2} alt="seinen" />
         </div>

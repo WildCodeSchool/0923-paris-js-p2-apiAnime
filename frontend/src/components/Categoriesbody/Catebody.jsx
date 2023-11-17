@@ -14,42 +14,42 @@ function Catebody() {
       </div>
       <div className="containercat">
         <div className="groupe seinen">
-          <img className="imgcat" src={imgkimodo} alt="komodo" />
           <button
             className="buttoncateg"
             type="button"
             onClick={() => navigate("/komodo")}
           >
+            <img className="imgcat" src={imgkimodo} alt="komodo" />
             Komodo
           </button>
         </div>
         <div className="groupe shonen">
-          <img className="imgcat" src={imgshonen} alt="shonen" />
           <button
             className="buttoncateg"
             type="button"
             onClick={() => navigate("/shonen")}
           >
+            <img className="imgcat" src={imgshonen} alt="shonen" />
             Shounen
           </button>
         </div>
         <div className="groupe shojo">
-          <img className="imgcat" src={imgshojo} alt="shojo" />
           <button
             className="buttoncateg"
             type="button"
             onClick={() => navigate("/shojo")}
           >
+            <img className="imgcat" src={imgshojo} alt="shojo" />
             Shoujo
           </button>
         </div>
         <div className="groupe kimodo">
-          <img className="imgcat" src={imgseinen} alt="seinen" />
           <button
             className="buttoncateg"
             type="button"
             onClick={() => navigate("/seinen")}
           >
+            <img className="imgcat" src={imgseinen} alt="seinen" />
             Seinen
           </button>
         </div>
