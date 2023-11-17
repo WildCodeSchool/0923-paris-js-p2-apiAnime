@@ -1,23 +1,18 @@
-.contaih2 {
-  background-color: #ffffffbf;
+.input-wrapper {
+  background-color: #fdf9f9bf;
   border-radius: 20px;
-  width: 50%;
+  width: 36%;
   margin: 0 auto;
 }
-.h2cat {
-  font-size: 3rem;
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
-  background: linear-gradient(
-    1000deg,
-    rgb(8, 4, 248) 40%,
-    rgb(5, 243, 116) 50%,
-    rgb(243, 3, 3) 65%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.barre {
+  width: 28rem;
+  border-radius: 1rem;
+  height: 2rem;
+}
+.bouton {
+  height: 3rem;
+  border-radius: 1rem;
+  padding: bottom 0;
 }
 
 .containercat {
