@@ -37,9 +37,8 @@
   height: 250px;
 }
 .chaine2 {
-  margin-bottom: -2rem;
-  transform: rotate(-330deg);
-  height: 250px;
+  /* transform: rotate(-330deg);
+  height: 150px */
 }
 
 .carrouu {
