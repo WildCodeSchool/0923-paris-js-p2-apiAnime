@@ -27,7 +27,7 @@ function Catebody() {
       <form className="alex">
         <div className="input-wrapper">
           <input
-            placeholder="Search your anime"
+            placeholder="Anime..."
             type="search"
             id={recherche}
             onChange={(e) => setRecherche(e.target.value)}
