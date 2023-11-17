@@ -2,7 +2,7 @@
   font-family: Bangers;
   src: url(Bangers-Regular.ttf);
 }
-.PageSelec.carousel {
+.carousel {
   margin: 0;
   padding: 0;
   display: flex;
@@ -87,15 +87,19 @@
 }
 
 @media screen and (max-width: 726px) {
-  /* .carousel {
-    min-height: 40vh;
-  }
-  .box {
-    width: 20%;
-    height: 50%;
-  } */
   .AnimeText {
     font-size: 5rem;
     margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  .box span img {
+    width: 100%;
+    height: 100%;
+  }
+  .box {
+    top: 5rem;
+    width: 8rem;
+    height: 8rem;
   }
 }

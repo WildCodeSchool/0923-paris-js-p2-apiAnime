@@ -159,7 +159,6 @@ table {
 .blocboutton {
   display: flex;
   padding: 0.5rem;
-  /* transform: skew(10deg); */
   background: linear-gradient(
     120deg,
     red,
@@ -188,7 +187,6 @@ table {
 
 .button:hover {
   opacity: 1;
-  /* background:rgba(38, 154, 221, 0.5); */
   background-color: transparent;
   color: white;
 }

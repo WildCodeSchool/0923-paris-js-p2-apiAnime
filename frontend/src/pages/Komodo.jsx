@@ -41,7 +41,7 @@ function Komodo() {
         <div className="resume">
           {mangas.map((manga) => {
             return (
-              <div key={manga.mal_id}>
+              <div key={manga.mal_id} className="card">
                 <button
                   type="button"
                   onClick={() => navigate(`/lastPage/${manga.mal_id}`)}
