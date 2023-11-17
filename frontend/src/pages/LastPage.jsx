@@ -24,24 +24,29 @@ function LastPage() {
       <div className="principal">
         <div className="VideoResume">
           <h1>{mangue.title}</h1>
-          <img src={goyave.images?.jpg?.image_url} alt="" />
+          <center>
+            <img
+              className="imgVideoResume"
+              src={goyave.images?.jpg?.image_url}
+              alt=""
+            />
+            <h2 className="resumeAnime">Resume</h2>
+          </center>
           <p className="TextResume">{goyave.synopsis}</p>
-          <h2>Résumé Vidéo</h2>
+          <h2>Video Summary</h2>
           <div className="player-wrapper">
             <ReactPlayer
               url={goyave?.trailer?.url}
               playing
               controls
               muted
-              width="100%"
-              height="100%"
+              width="70%"
+              height="70%"
               className="player"
             />
           </div>
         </div>
-        <div className="titre">
-          <h2>Episodes</h2>
-        </div>
+        <h2 className="EpisodeAnime">Episodes</h2>
         <div className="affiche">
           {mangue.episodes?.map((episode) => {
             return (

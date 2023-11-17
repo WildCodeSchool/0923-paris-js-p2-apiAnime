@@ -5,6 +5,7 @@ import Seinen from "./pages/Seinen";
 import Shonen from "./pages/Shonen";
 import Shojo from "./pages/Shojo";
 import Komodo from "./pages/Komodo";
+import Hentai from "./pages/Hentai";
 import LastPage from "./pages/LastPage";
 import Footer from "./components/Footer/Footer";
 import Video from "./Video";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/shonen" element={<Shonen />} />
         <Route path="/shojo" element={<Shojo />} />
         <Route path="/seinen" element={<Seinen />} />
+        <Route path="/hentai" element={<Hentai />} />
         <Route path="/LastPage/:Id" element={<LastPage />} />
       </Routes>
       <Footer />

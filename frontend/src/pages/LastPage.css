@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Bangers;
+  src: url(Bangers-Regular.ttf);
+}
 .PageResume {
   background-image: url("../src/components/imageBackground/BackgroundNight.jpg");
   background-size: cover;
@@ -23,48 +27,78 @@
   gap: 10;
 }
 .TextResume {
-  color: rgb(93, 179, 179);
+  color: white;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  padding: 1rem;
   margin-bottom: 5rem;
-  margin-left: 20rem;
-  margin-right: 20rem;
-}
-.VideoResume h2 {
-  color: greenyellow;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  background-color: rgba(0, 0, 0, 0.692);
   text-align: center;
+  border-radius: 30px;
+}
+.imgVideoResume {
+  height: 25rem;
+  border-radius: 10%;
+  margin-bottom: 4rem;
+}
+.resumeAnime {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
+}
+.EpisodeAnime {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
+  margin-bottom: 1rem;
+}
+
+.VideoResume h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Bangers;
+  text-shadow: 0 0 10px #36e9fd;
+  margin-bottom: 1rem;
 }
 .player-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10vh;
-  border-radius: 30%;
 }
 .player {
-  border-color: brown;
+  /* border-color: brown; */
+  border-radius: 10px;
+  margin-bottom: 13rem;
+  border-radius: 30%;
 }
 .titre {
-  display: flex;
+  text-align: center;
 }
 .titre h2 {
   height: 15vh;
-  font-size: 3 rem;
+  font-size: 3rem;
   text-align: center;
 }
-.episode {
-  display: flex;
-  justify-content: center;
-}
+
 .jojo {
   padding-top: 5rem;
   font-size: 1.5rem;
 }
 .affiche {
   display: flex;
-  padding: 1rem;
-  padding-left: 3rem;
   flex-wrap: wrap;
-  gap: 10px;
+  margin-left: 5rem;
+  gap: 20px;
+}
+.riri {
+  border-radius: 10%;
+  border: solid 0.2rem black;
 }
