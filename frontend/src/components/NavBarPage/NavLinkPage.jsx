@@ -42,7 +42,7 @@ function NavLinkPage() {
           src="../src/assets/images/NavBar/cloudTransparent.png"
           alt="cloud"
         />
-        <h1 className="textNavBar">Hentai</h1>
+        <h1 className="textNavBar">Hentai!</h1>
       </NavLink>
     </nav>
   );
