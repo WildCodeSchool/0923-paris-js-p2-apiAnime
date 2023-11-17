@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding-top: 1rem;
 }
 
 .Iriyajo {
@@ -42,5 +41,10 @@
   .loginsign {
     width: 50%;
     overflow: hidden;
+  }
+  @media screen and (max-width: 426px) {
+    .ImgLogin {
+      height: 2rem;
+    }
   }
 }

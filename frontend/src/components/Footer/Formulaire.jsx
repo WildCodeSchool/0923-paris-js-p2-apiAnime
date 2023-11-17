@@ -2,7 +2,7 @@ import "./formulaire.css";
 
 function Formulaire() {
   return (
-    <div className="container">
+    <div className="containerformulaire">
       <form className="form" action="merci.html">
         <div className="formulaire">
           <label className="label" htmlFor="name">

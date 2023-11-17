@@ -21,9 +21,14 @@
   width: 80rem;
   top: 0.4rem;
 }
+.popsakura,
+.poptruncks {
+  height: 150px;
+}
 .popjaune {
   position: relative;
   top: 1.8rem;
+  height: 120px;
 }
 
 .chaine1 {
@@ -43,16 +48,29 @@
   margin: 0 auto;
   border: 0.4rem solid black;
   border-radius: 2rem;
-  height: 85vh;
-  margin-bottom: 5rem;
+  height: 90vh;
+  margin-bottom: 2rem;
   overflow: hidden;
 }
 
 @media screen and (max-width: 426px) {
   .chaine1 {
+    margin-bottom: -2rem;
     height: 129px;
   }
   .chaine2 {
+    margin-bottom: -1.5rem;
     height: 129px;
+  }
+  .carrouu {
+    height: 37vh;
+    margin-bottom: 3rem;
+  }
+  .popsakura,
+  .poptruncks {
+    height: 100px;
+  }
+  .popjaune {
+    height: 70px;
   }
 }
