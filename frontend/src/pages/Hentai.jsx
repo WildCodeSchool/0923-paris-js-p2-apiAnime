@@ -4,7 +4,7 @@ import NavLinkPage from "../components/NavBarPage/NavLinkPage";
 import NavBarPages from "../components/NavBarPage/NavBarPages";
 import "./categorie.css";
 
-function Shojo() {
+function Komodo() {
   const [mangas, setMangas] = useState([]);
   const [current, setCurrent] = useState(1);
   const [viewButton, setViewButton] = useState(true);
@@ -15,7 +15,7 @@ function Shojo() {
 
   useEffect(() => {
     fetch(
-      `https://api.jikan.moe/v4/anime?genres=25&page=${current}&limit=${numberOfImagesToDisplay}`
+      `https://api.jikan.moe/v4/anime?genres=12&page=${current}&limit=${numberOfImagesToDisplay}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -37,11 +37,11 @@ function Shojo() {
       <NavBarPages />
       <NavLinkPage />
       <div className="container">
-        <center className="CategorieAnime">SHÔUJO</center>
+        <center className="CategorieAnime">Hentai!</center>
         <div className="resume">
           {mangas.map((manga) => {
             return (
-              <div className="ines" key={manga.mal_id}>
+              <div key={manga.mal_id}>
                 <button
                   type="button"
                   onClick={() => navigate(`/lastPage/${manga.mal_id}`)}
@@ -58,29 +58,29 @@ function Shojo() {
             );
           })}
         </div>
-        <div className="ButtonNav">
-          {current <= 1 ? null : (
-            <button type="button" onClick={previous}>
-              <img
-                className="ButtonNextPrev"
-                src="../src/assets/images/NavBar/KunaiPrevTrans.png"
-                alt="Button Prev"
-              />
-            </button>
-          )}
-          {viewButton ? (
-            <button type="button" onClick={next}>
-              <img
-                className="ButtonNextPrev"
-                src="../src/assets/images/NavBar/KunaiNextTrans.png"
-                alt="Button Next"
-              />
-            </button>
-          ) : null}
-        </div>
+      </div>
+      <div className="ButtonNav">
+        {current <= 1 ? null : (
+          <button type="button" onClick={previous}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/KunaiPrevTrans.png"
+              alt="Button Prev"
+            />
+          </button>
+        )}
+        {viewButton ? (
+          <button type="button" onClick={next}>
+            <img
+              className="ButtonNextPrev"
+              src="../src/assets/images/NavBar/KunaiNextTrans.png"
+              alt="Button Next"
+            />
+          </button>
+        ) : null}
       </div>
     </main>
   );
 }
 
-export default Shojo;
+export default Komodo;

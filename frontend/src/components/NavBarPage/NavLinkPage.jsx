@@ -36,6 +36,14 @@ function NavLinkPage() {
         />
         <h1 className="textNavBar">Seinen</h1>
       </NavLink>
+      <NavLink to="/hentai">
+        <img
+          className="ImageNavLink"
+          src="../src/assets/images/NavBar/cloudTransparent.png"
+          alt="cloud"
+        />
+        <h1 className="textNavBar">Hentai</h1>
+      </NavLink>
     </nav>
   );
 }
