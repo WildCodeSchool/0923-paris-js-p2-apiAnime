@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Carousel.css";
 import assassination from "../../assets/assassination.jpg";
 import eren from "../../assets/eren.jpg";
@@ -7,9 +8,16 @@ import goku from "../../assets/goku.jpg";
 import luffy from "../../assets/luffy.jpg";
 
 function Carousel() {
+  const navigate = useNavigate();
   return (
     <center className="carousel">
-      <p className="AnimeText">Top Anime</p>
+      <button
+        type="button"
+        onClick={() => navigate("/hentai")}
+        className="AnimeText"
+      >
+        Top Anime
+      </button>
       <div className="box">
         <span className="onepics">
           <img src={bleach} alt="" />

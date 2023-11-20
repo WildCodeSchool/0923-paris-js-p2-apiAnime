@@ -23,7 +23,7 @@ function LastPage() {
       <NavLinkPage />
       <div className="principal">
         <div className="VideoResume">
-          <h1>{mangue.title}</h1>
+          <h1 className="titreResume">{goyave.title}</h1>
           <center>
             <img
               className="imgVideoResume"
@@ -53,7 +53,7 @@ function LastPage() {
               <div className="episode" key={episode.mal_id}>
                 <a className="yaya" href={episode.url}>
                   <img
-                    src={episode?.images?.jpg.image_url}
+                    src={episode?.images?.jpg?.image_url}
                     alt={episode.title}
                     className="riri"
                   />

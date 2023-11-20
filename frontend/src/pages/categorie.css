@@ -78,6 +78,9 @@
     height: 30vh;
   }
   .ButtonNav button {
-    height: 3rem;
+    height: 2rem;
+  }
+  .ButtonNextPrev {
+    height: 2rem;
   }
 }
